@@ -13,4 +13,11 @@ class PesquisaController extends Controller
         
         return $resultados;
     }
+
+    public function comprar(Request $request){
+        $crawler = new Crawler();
+        $resultado = $crawler->comprar($request);
+
+        return $resultado;
+    }
 }
